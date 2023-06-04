@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./sobremi.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Oswald:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awewsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/7f92f1169b.js" crossorigin="anonymous"></script>
+
+  <title>Sobre mi | Mago asensio</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a class="navbar__brand" href="./index.html">
+      <img src="./public/img/magoasensio.png" alt="" width="80" height="80">
+      MAGO ASENSIO
+    </a>
+    <button class="navbar__toggle-button">
+      <i class="fa-sharp fa-solid fa-bars"></i>
+    </button>
+    <ul class="navbar__list">
+      <li class="list-item menu">DESCUBRE
+        <i class="fa-solid fa-caret-down"></i>
+        <ul class="menu-dropdown">
+          <li class="menu-dropdown__item"><a href="./sobremi.html">BIO</a></li>
+          <li class="menu-dropdown__item"><a href="./espectaculos.html">ESPECTACULOS</a></li>
+          <li class="menu-dropdown__item"><a href="https://my-store-d43113.creator-spring.com/">MERCHANDISING</a></li>
+        </ul>
+      </li>
+      <li class="list-item"><a href="./agenda.html">AGENDA</a></li>
+      <li class="list-item"><a href="./contacto.html">CONTACTO</a></li>
+      <button class="list-item list-item__button button"
+        onclick="location.href='https://magoasensio.4tickets.es/'">COMPRAR
+        ENTRADAS <i class="fa-solid fa-ticket"></i></button>
+    </ul>
+  </nav>
+
+  <section class="about">
+    <img src="./public/img/mago-asensio-image.png" alt="">
+    <div class="about__text-container">
+      <h1>EL ILUSIONISTA MÁS DIVERTIDO <span>DE LA HISTORIA</span></h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas amet fugit aliquam, fuga itaque vel
+        asperiores cumque atque consectetur soluta ipsam odit libero rem minus quasi! Inventore dignissimos deleniti
+        incidunt!</p>
+    </div>
+  </section>
+
+  <section class="slider-section">
+    <div class="text-container">
+      <h2>ELLOS YA ME HAN VISTO!</h2>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <img class="swiper-slide" src="./public/img/mago-asensio-banner.png" alt="">
+        <img class="swiper-slide" src="./public/img/mago-asensio-image.png" alt="">
+        <img class="swiper-slide" src="./public/img/mago-asensio-image-2.png" alt="">
+        <img class="swiper-slide" src="./public/img/mago-asensio-image-3.jpg" alt="">
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <span>© 2023 <a href="#">Mago Asensio™</a>. All Rights Reserved.
+      </span>
+      <ul>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#">Licensing</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1.5,
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>

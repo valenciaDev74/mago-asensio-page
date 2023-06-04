@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./contacto.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awewsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/7f92f1169b.js" crossorigin="anonymous"></script>
+
+  <title>Agenda | Mago asensio</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a class="navbar__brand" href="./index.html">
+      <img src="./public/img/magoasensio.png" alt="" width="80" height="80">
+      MAGO ASENSIO
+    </a>
+    <button class="navbar__toggle-button">
+      <i class="fa-sharp fa-solid fa-bars"></i>
+    </button>
+    <ul class="navbar__list">
+      <li class="list-item menu">DESCUBRE
+        <i class="fa-solid fa-caret-down"></i>
+        <ul class="menu-dropdown">
+          <li class="menu-dropdown__item"><a href="./sobremi.html">BIO</a></li>
+          <li class="menu-dropdown__item"><a href="./espectaculos.html">ESPECTACULOS</a></li>
+          <li class="menu-dropdown__item"><a href="https://my-store-d43113.creator-spring.com/">MERCHANDISING</a></li>
+        </ul>
+      </li>
+      <li class="list-item"><a href="./agenda.html">AGENDA</a></li>
+      <li class="list-item"><a href="./contacto.html">CONTACTO</a></li>
+      <button class="list-item list-item__button button"
+        onclick="location.href='https://magoasensio.4tickets.es/'">COMPRAR
+        ENTRADAS <i class="fa-solid fa-ticket"></i></button>
+    </ul>
+  </nav>
+
+  <section class="contact">
+    <h1>Contactame</h1>
+    <div class="contact-content">
+      <form id="form" action="" class="form">
+        <label for="name">Nombre Completo <span>*</span></label>
+        <input name="name" required type="text" id="name" placeholder="Juan">
+        <label for="email">Correo electrónico <span>*</span></label>
+        <input name="email" type="text" id="email" required placeholder="juan@gmail.com">
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+        <button type="submit" class="button">enviar mensaje</button>
+      </form>
+      <a href="mailto:me@leonidasesteban.com" id="trucazo"></a>
+    </div>
+    <p>CORREO: magoasensio@gmail.com</p>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer__content">
+      <span>© 2023 <a href="#">Mago Asensio™</a>. All Rights Reserved.
+      </span>
+      <ul>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#">Licensing</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+  <script>
+    const $form = document.querySelector('#form')
+    const $buttonMailto = document.querySelector('#trucazo')
+
+    $form.addEventListener('submit', handleSubmit)
+
+    function handleSubmit(event) {
+      event.preventDefault()
+      const form = new FormData(this)
+      $buttonMailto.setAttribute('href', `mailto:me@leonidasesteban.com?subject=${form.get('name')}${form.get('email')}&body=${form.get('message')}`)
+      $buttonMailto.click()
+    }
+  </script>
+</body>
+
+</html>

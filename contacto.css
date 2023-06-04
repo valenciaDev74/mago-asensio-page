@@ -1,0 +1,59 @@
+.contact {
+  margin: 1rem auto 10rem auto;
+}
+
+.contact h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contact p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.836);
+}
+
+.contact-content {
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input,
+.form textarea {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.form input {
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.form textarea {
+  border-radius: 10px;
+  padding: 0.5rem;
+  resize: none;
+}
+
+.form .button {
+  background-color: rgb(45, 112, 255);
+}
+
+@media only screen and (min-width: 768px) {
+  .contact {
+    margin: 1rem auto 10rem auto;
+    width: 20rem;
+  }
+
+  .contact h1 {
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}

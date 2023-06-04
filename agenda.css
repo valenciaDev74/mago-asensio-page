@@ -1,0 +1,85 @@
+.agenda {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0 auto;
+  gap: 1rem;
+  margin-bottom: 10rem;
+}
+
+.agenda h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.item-fecha {
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.item-fecha p {
+  margin: 0;
+}
+
+.item-fecha__cube {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  height: 5rem;
+  width: 5rem;
+}
+
+.item-fecha__cube p {
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.item-fecha__cube p.number {
+  font-size: 2rem;
+}
+
+.item-fecha__content {
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 0.2rem;
+  padding: 0.3rem 0;
+  font-size: 1.2rem;
+}
+
+.item-fecha__content .content-title {
+  font-weight: 600;
+}
+
+.item-fecha__content .button {
+  font-size: 1rem;
+  background-color: rgb(45, 112, 255);
+}
+
+@media only screen and (min-width: 768px) {
+  .agenda {
+    width: 60vw;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+  }
+
+  .item-fecha {
+    width: 100%;
+  }
+
+  .item-fecha__content {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .item-fecha__content .button {
+    font-size: 1.2rem;
+  }
+}
